@@ -1,2 +1,2 @@
 # leetcode-go
-leetcode算法的go上线
+go实现的leetcode上面的算法题解
