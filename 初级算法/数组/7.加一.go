@@ -1,14 +1,5 @@
 //题目地址：https://leetcode-cn.com/explore/interview/card/top-interview-questions-easy/1/array/27/
-package main
-
-import "fmt"
-
-func main()  {
-	digits := []int{9,9,9}
-	result := plusOne(digits)
-
-	fmt.Println(result)
-}
+package 数组
 
 func plusOne(digits []int) []int {
 	length := len(digits)

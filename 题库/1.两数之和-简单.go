@@ -1,16 +1,5 @@
 //题目地址：https://leetcode-cn.com/problems/two-sum/
-package main
-
-import "fmt"
-
-func main()  {
-	nums := []int{2, 7, 11, 15}
-	target := 9
-
-	result := twoSum(nums, target)
-
-	fmt.Println(result)
-}
+package 题库
 
 func twoSum(num []int, target int)[]int {
 	numLength := len(num)

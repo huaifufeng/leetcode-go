@@ -1,15 +1,5 @@
 //题目地址：https://leetcode-cn.com/explore/interview/card/top-interview-questions-easy/1/array/21/
-package main
-
-import "fmt"
-
-func main() {
-	nums := []int{0,0,1,1,2,3,4,4,4,5,5,6}
-
-	result := removeDuplicates(nums)
-
-	fmt.Println(result)
-}
+package 数组
 
 func removeDuplicates(nums []int) int {
 	index := 0

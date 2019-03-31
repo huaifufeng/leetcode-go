@@ -1,7 +1,5 @@
 //题目地址：https://leetcode-cn.com/problems/add-two-numbers/
-package main
-
-import "fmt"
+package 题库
 
 type ListNode struct {
 	Val int
@@ -11,18 +9,8 @@ type ListNode struct {
 func (l *ListNode) print() {
 	currentNode := l
 	for currentNode != nil {
-		fmt.Println(currentNode.Val)
 		currentNode = currentNode.Next
 	}
-}
-
-func main() {
-	l1 := &ListNode{2, &ListNode{4, &ListNode{3, nil}}}
-	l2 := &ListNode{5, &ListNode{6, &ListNode{4, nil}}}
-
-	result := addTwoNumbers(l1, l2)
-
-	result.print()
 }
 
 func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {

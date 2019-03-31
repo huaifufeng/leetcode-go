@@ -1,13 +1,5 @@
 //题目地址:https://leetcode-cn.com/explore/interview/card/top-interview-questions-easy/1/array/28/
-package main
-
-import "fmt"
-
-func main() {
-	nums := []int{1, 0, 3}
-	moveZeroes(nums)
-
-}
+package 数组
 
 func moveZeroes(nums []int)  {
 	j := 0
@@ -22,5 +14,4 @@ func moveZeroes(nums []int)  {
 		nums[j] = 0
 	}
 
-	fmt.Println(nums)
 }

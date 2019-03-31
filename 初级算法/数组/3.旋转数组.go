@@ -1,16 +1,5 @@
 //题目地址：https://leetcode-cn.com/explore/interview/card/top-interview-questions-easy/1/array/23/
-package main
-
-import "fmt"
-
-func main(){
-	array1 := []int{1,2,3}
-	array2 := []int{-1,-100,3,99}
-	rotate(array1, 2)
-	rotate(array2, 2)
-
-	fmt.Println(array1, array2)
-}
+package 数组
 
 func rotate(nums []int, k int) {
 	length := len(nums)
@@ -35,7 +24,6 @@ func rotate1(nums []int, k int) {
 		k = k % length
 	}
 	nums = append(nums[length-k:], nums[0:length - k]...)
-	fmt.Println(nums)
 }
 
 func rotate2(nums []int, k int) {

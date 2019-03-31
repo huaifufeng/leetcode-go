@@ -1,16 +1,5 @@
 //题目地址：https://leetcode-cn.com/explore/interview/card/top-interview-questions-easy/1/array/29/
-package main
-
-import "fmt"
-
-func main() {
-	num := []int{2, 7, 11, 15}
-	target := 9
-
-	result := twoSum(num, target)
-
-	fmt.Println(result)
-}
+package 数组
 
 func twoSum(num []int, target int)[]int {
 	hasMap := make(map[int]int)

@@ -1,25 +1,5 @@
-package main
-
-import "fmt"
-
 //题目地址：https://leetcode-cn.com/explore/interview/card/top-interview-questions-easy/1/array/30/
-func main() {
-	sudoku := [][]byte{
-		{'8','3','.','.','7','.','.','.','.'},
-		{'6','.','.','1','9','5','.','.','.'},
-		{'.','9','8','.','.','.','.','6','.'},
-		{'8','.','.','.','6','.','.','.','3'},
-		{'4','.','.','8','.','3','.','.','1'},
-		{'7','.','.','.','2','.','.','.','6'},
-		{'.','6','.','.','.','.','2','8','.'},
-		{'.','.','.','4','1','9','.','.','5'},
-		{'.','.','.','.','8','.','.','7','9'},
-	}
-
-	result := isValidSudoku(sudoku)
-
-	fmt.Println(result)
-}
+package 数组
 
 func isValidSudoku(board [][]byte) bool {
 	verticalMap := make([]map[byte]int, 9)
