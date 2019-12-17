@@ -1,5 +1,5 @@
 //题目地址：https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/
-package 题库
+package questionBank
 
 import (
 	"math"
