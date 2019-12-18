@@ -12,7 +12,7 @@ func TestTwoSum(t *testing.T) {
 
 	targets := questionBank.TwoSum(nums, target)
 	//返回值长度必须为2
-	if len(targets) != 1 {
+	if len(targets) != 2 {
 		t.Error("返回值长度不正确")
 	}
 
