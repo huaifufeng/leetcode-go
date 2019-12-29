@@ -15,13 +15,10 @@
 */
 package questionBank
 
-import "fmt"
-
 func maxSubArray(nums []int) int {
 	res := nums[0]
 	sum := 0
 	for _,val := range nums  {
-		//
 		if sum > 0 {
 			sum += val
 		} else {
@@ -32,8 +29,6 @@ func maxSubArray(nums []int) int {
 		if res < sum {
 			res = sum
 		}
-
-		fmt.Println(sum, res)
 	}
 
 	return res
