@@ -12,6 +12,4 @@ func TestRemoveElement(t *testing.T) {
 		t.Log(res)
 		t.Error("方法验证失败")
 	}
-
-	t.Error(nums[:res])
 }
