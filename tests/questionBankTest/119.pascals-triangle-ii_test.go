@@ -9,7 +9,7 @@ import (
 func TestGetRow(t *testing.T) {
 	res := questionBank.GetRow(3)
 	fmt.Println(res)
-	if res[0] != 2 {
+	if res[2] != 3 {
 		t.Error("方法错误")
 	}
 }
