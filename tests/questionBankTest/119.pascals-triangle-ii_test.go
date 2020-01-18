@@ -1,13 +1,15 @@
 package questionBankTest
 
 import (
+	"fmt"
 	"leetcode-go/questionBank"
 	"testing"
 )
 
-func TestGenerate(t *testing.T) {
-	res := questionBank.Generate(1)
-	if res[0][0] != 1 {
+func TestGetRow(t *testing.T) {
+	res := questionBank.GetRow(3)
+	fmt.Println(res)
+	if res[0] != 2 {
 		t.Error("方法错误")
 	}
 }
