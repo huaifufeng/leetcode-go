@@ -13,15 +13,16 @@
   </pre>
 
   解题：
-	1、对三角的每一行进行处理，处理第一行时固定的1，其他的都是每行开始和结尾都是1，其他的是该元素左上和右上的元素之和 O(n^2)
+	1、第一种就是暴力破解，依次对比数组的每个元素和之后的元素 O(n^2)
 */
 package questionBank
 
 func maxProfit(prices []int) int {
 	maxPrice := 0
 
-	for i := 0; i < len(prices); i++ {
-		for j := 1; j < len(prices); j++ {
+	//对所有数组元素进行比较
+	for i := 0; i < len(prices) - 1; i++ {
+		for j := i + 1; j < len(prices); j++ {
 			if prices[j] > prices[i] {
 				price := prices[j] - prices[i]
 				if maxPrice < price {
