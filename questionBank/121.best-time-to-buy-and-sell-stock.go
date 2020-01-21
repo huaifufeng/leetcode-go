@@ -14,10 +14,15 @@
 
   解题：
 	1、第一种就是暴力破解，依次对比数组的每个元素和之后的元素 O(n^2)
+    2、第二种是循环，获取当前的最小价格，拿着当前的价格和这个最小价格比较，获取最大的收益值 O(n)
 */
 package questionBank
 
-func maxProfit(prices []int) int {
+import (
+	"math"
+)
+
+func maxProfit1(prices []int) int {
 	maxPrice := 0
 
 	//对所有数组元素进行比较
@@ -28,6 +33,25 @@ func maxProfit(prices []int) int {
 				if maxPrice < price {
 					maxPrice = price
 				}
+			}
+		}
+	}
+
+	return maxPrice
+}
+
+func maxProfit(prices []int) int {
+	maxPrice := 0
+
+	//对所有数组元素进行比较
+	minPrice := math.MaxInt32
+	for i := 0; i < len(prices); i++ {
+		if prices[i] < minPrice {
+			minPrice = prices[i]
+		} else {
+			curPrice := prices[i] - minPrice
+			if curPrice > maxPrice {
+				maxPrice = curPrice
 			}
 		}
 	}
