@@ -1,12 +1,11 @@
-package questionBankTest
+package questionBank
 
 import (
-	"leetcode-go/questionBank"
 	"testing"
 )
 
 func TestValidParentheses(t *testing.T) {
-	value := questionBank.ValidParentheses("{}")
+	value := ValidParentheses("{}")
 	if value != true{
 		t.Log(value)
 		t.Error("方法验证失败")

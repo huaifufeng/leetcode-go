@@ -1,7 +1,6 @@
-package questionBankTest
+package questionBank
 
 import (
-	"leetcode-go/questionBank"
 	"testing"
 )
 
@@ -10,7 +9,7 @@ func TestTwoSum(t *testing.T) {
 	nums := []int{2, 7, 11, 15}
 	target := 9
 
-	targets := questionBank.TwoSum(nums, target)
+	targets := TwoSum(nums, target)
 	//返回值长度必须为2
 	if len(targets) != 2 {
 		t.Error("返回值长度不正确")

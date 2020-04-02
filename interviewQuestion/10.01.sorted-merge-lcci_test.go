@@ -1,7 +1,6 @@
-package interviewQuestionTest
+package interviewQuestion
 
 import (
-	"leetcode-go/interviewQuestion"
 	"testing"
 )
 
@@ -11,7 +10,7 @@ func TestSortedMergeLcci(t *testing.T)  {
 	B := []int{2,5,6}
 	n := 3
 
-	ret := interviewQuestion.Merge(A, m, B, n)
+	ret := Merge(A, m, B, n)
 
 	if ret[5] != 6 {
 		t.Error("结果不对")

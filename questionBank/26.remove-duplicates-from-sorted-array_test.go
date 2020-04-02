@@ -1,13 +1,12 @@
-package questionBankTest
+package questionBank
 
 import (
-	"leetcode-go/questionBank"
 	"testing"
 )
 
 func TestRemoveDuplicates(t *testing.T) {
 	nums := []int{0,0,1,1,1,2,2,3,3,4}
-	res := questionBank.RemoveDuplicates(nums)
+	res := RemoveDuplicates(nums)
 	if res != 5 {
 		t.Log(res)
 		t.Error("方法验证失败")

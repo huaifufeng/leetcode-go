@@ -1,12 +1,11 @@
-package questionBankTest
+package questionBank
 
 import (
-	"leetcode-go/questionBank"
 	"testing"
 )
 
 func TestClimbStairs(t *testing.T) {
-	res := questionBank.ClimbStairs(4)
+	res := ClimbStairs(4)
 	if res != 5 {
 		t.Log(res)
 		t.Error("爬楼算法错误")
