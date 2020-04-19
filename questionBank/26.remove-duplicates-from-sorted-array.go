@@ -31,6 +31,9 @@ func removeDuplicates(nums []int) int {
 		}
 	}
 
+	//这里没有计算0位的元素，最后增加上
+	i++
+
 	return i
 }
 
