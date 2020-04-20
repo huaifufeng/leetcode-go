@@ -44,6 +44,31 @@ func mergeTwoLists(l1 *ListNode, l2 *ListNode) *ListNode {
 	return l
 }
 
+func mergeTwoLists1(l1 *ListNode, l2 *ListNode) *ListNode {
+	l := new(ListNode)
+	first := l
+
+	for l1 != nil && l2 != nil {
+		if l1.Val < l2.Val {
+			l.Next = l1
+			l1 = l1.Next
+		} else {
+			l.Next = l2
+			l2 = l2.Next
+		}
+
+		l = l.Next
+	}
+
+	if l1 == nil {
+		l.Next = l2
+	} else {
+		l.Next = l1
+	}
+
+	return first.Next
+}
+
 func MergeTwoLists(l1 *ListNode, l2 *ListNode) *ListNode {
-	return mergeTwoLists(l1, l2)
+	return mergeTwoLists1(l1, l2)
 }
