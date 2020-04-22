@@ -4,9 +4,9 @@ import (
 	"testing"
 )
 
-func TestBubbleSort(t *testing.T) {
+func TestInsertSort(t *testing.T) {
 	nums := []int{1,3,2,7,3,5,1,4}
-	BubbleSort(nums)
+	InsertSort(nums)
 
 	for i:=0; i< len(nums) - 1; i++ {
 		if nums[i] > nums[i+1] {
@@ -15,9 +15,10 @@ func TestBubbleSort(t *testing.T) {
 	}
 }
 
-func TestBubbleSort2(t *testing.T) {
+
+func TestInsertSort2(t *testing.T) {
 	nums := []int{1,3,2,7,3,5,1,4}
-	BubbleSort2(nums)
+	InsertSort2(nums)
 
 	for i:=0; i< len(nums) - 1; i++ {
 		if nums[i] > nums[i+1] {
