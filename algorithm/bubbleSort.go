@@ -1,9 +1,9 @@
 package algorithm
 
 //BubbleSort 冒泡排序算法，每个位置和临位进行比较。增加一个标识为，如果没有进行交换处理，说明这些元素不用处理直接结束
-func BubbleSort(nums []int) []int{
+func BubbleSort(nums []int){
 	if len(nums) <= 1 {
-		return nums
+		return
 	}
 
 	for i := 0 ; i < len(nums); i++ {
@@ -21,12 +21,10 @@ func BubbleSort(nums []int) []int{
 			break
 		}
 	}
-
-	return nums
 }
 
 //BubbleSort2 相比于上面的方法，增加交换位标识，交换位之后的位置，没有交换处理，说明都是已经排好序的元素
-func BubbleSort2(nums []int) []int {
+func BubbleSort2(nums []int){
 	sortPos := len(nums) - 1
 	lastIndex := 0
 	for i := 0; i < len(nums); i++ {
@@ -44,7 +42,5 @@ func BubbleSort2(nums []int) []int {
 			break
 		}
 	}
-
-	return nums
 }
 
