@@ -1,0 +1,45 @@
+package algorithm
+
+import "fmt"
+
+func QuickSort(nums []int, start, end int) {
+	if start <= end {
+		pivot := partition2(nums, start, end)
+		fmt.Println(pivot)
+		QuickSort(nums, start, pivot - 1)
+		QuickSort(nums, pivot + 1, end)
+	}
+}
+
+//partition 选择数组尾部节点作为基点
+func partition(nums []int, start, end int) int {
+	i := start
+	j := start
+	for ; j < end; j++ {
+		if nums[j] <= nums[end] {
+			nums[i], nums[j] = nums[j], nums[i]
+			i++
+		}
+	}
+
+	nums[i], nums[end] = nums[end], nums[i]
+
+	return i
+}
+
+//partition2 选择排头作为基点
+func partition2(nums []int, start, end int) int {
+	i := end
+	j := end
+	for ; j > start; j-- {
+		if nums[j] > nums[start] {
+			nums[i], nums[j] = nums[j], nums[i]
+			i--
+		}
+	}
+
+	fmt.Println(nums, start, end, i, j)
+	nums[i], nums[start] = nums[start], nums[i]
+
+	return i
+}
