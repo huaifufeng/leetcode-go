@@ -36,7 +36,7 @@ func lengthOfLastWord(s string) int {
 		return 0
 	}
 
-	return len(words[len(words) - 1])
+	return len(words[len(words)-1])
 }
 
 func lengthOfLastWord2(s string) int {
@@ -44,10 +44,10 @@ func lengthOfLastWord2(s string) int {
 
 	needChange := 1
 	curLength := 0
-	for i := 0 ; i < strLength; i++ {
+	for i := 0; i < strLength; i++ {
 		//遇到空字符串，说明接下来的遇到字符串是需要修改单词的长度的，这里就设置标识为需要修改
 		if s[i] == ' ' {
-			if needChange != 1{
+			if needChange != 1 {
 				needChange = 1
 			}
 			//否则，就按照标识如果需要修改，就设置单词长度为1，并标识设置为0不需要修改，直到遇到空字符串；否则就是增加单词长度

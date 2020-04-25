@@ -1,24 +1,27 @@
 package algorithm
 
+//归并排序
+//稳定排序，时间复杂度O(nlogn) 空间复杂度O(n)
+
 //mergeSortFunc 声明进行处理任务的递归方法
 func MergeSort(nums []int, left, right int) {
 	if left < right {
-		mid := (left + right ) / 2
+		mid := (left + right) / 2
 		MergeSort(nums, left, mid)
-		MergeSort(nums, mid + 1, right)
+		MergeSort(nums, mid+1, right)
 		merge(nums, left, mid, right)
 	}
 }
 
 //merge 对两个处理完毕的子任务进行合并操作的方法
-func merge(nums []int, left, mid, right int){
+func merge(nums []int, left, mid, right int) {
 	i := left
 	j := mid + 1
 	k := 0
 	//需要声明临时数组来存放合并之后的数据，如果直接在原有数组上进行操作，数组的值就会被修改了，
-	tempArr := make([]int, right - left + 1)
+	tempArr := make([]int, right-left+1)
 	for i <= mid && j <= right {
-		if nums[i] > nums[j]  {
+		if nums[i] > nums[j] {
 			tempArr[k] = nums[j]
 			k++
 			j++
@@ -47,4 +50,3 @@ func merge(nums []int, left, mid, right int){
 		left++
 	}
 }
-

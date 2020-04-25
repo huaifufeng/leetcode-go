@@ -10,7 +10,7 @@ func TestDeleteDuplicates(t *testing.T) {
 		Next: &ListNode{
 			Val: 1,
 			Next: &ListNode{
-				Val: 2,
+				Val:  2,
 				Next: nil,
 			},
 		},

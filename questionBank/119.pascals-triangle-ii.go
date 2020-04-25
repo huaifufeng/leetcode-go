@@ -16,19 +16,19 @@ package questionBank
 
 func getRow(rowIndex int) []int {
 	if rowIndex == 0 {
-		 return []int{1}
+		return []int{1}
 	}
 	if rowIndex == 1 {
 		return []int{1, 1}
 	}
 
-	ret := make([]int, rowIndex + 1)
+	ret := make([]int, rowIndex+1)
 	lastRow := getRow(rowIndex - 1)
 	for i := 0; i <= rowIndex; i++ {
-		if i == 0 || i == rowIndex{
+		if i == 0 || i == rowIndex {
 			ret[i] = 1
 		} else {
-			ret[i] = lastRow[i - 1] + lastRow[i]
+			ret[i] = lastRow[i-1] + lastRow[i]
 		}
 	}
 

@@ -36,7 +36,7 @@ func longestCommonPrefix(strs []string) string {
 	for i := 0; i < length; i++ {
 		cur := strs[0][i]
 		for j := 0; j < strLength; j++ {
-			if i == len(strs[j]) || strs[j][i] != cur{
+			if i == len(strs[j]) || strs[j][i] != cur {
 				return strs[0][0:i]
 			}
 		}
@@ -45,6 +45,6 @@ func longestCommonPrefix(strs []string) string {
 	return strs[0]
 }
 
-func LongestCommonPrefix(strs []string) string{
+func LongestCommonPrefix(strs []string) string {
 	return longestCommonPrefix(strs)
 }

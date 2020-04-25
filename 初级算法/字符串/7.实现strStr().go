@@ -15,7 +15,7 @@ func strStr(haystack string, needle string) int {
 	}
 
 	for i := 0; i < hayLen; i++ {
-		if hayLen - i < needleLen {
+		if hayLen-i < needleLen {
 			return -1
 		}
 

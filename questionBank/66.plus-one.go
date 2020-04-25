@@ -28,7 +28,7 @@ func plusOne(digits []int) []int {
 		}
 	}
 
-	digits = make([]int, digitLength + 1)
+	digits = make([]int, digitLength+1)
 	digits[0] = 1
 
 	return digits

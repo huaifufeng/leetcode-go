@@ -35,6 +35,6 @@ func deleteDuplicates(head *ListNode) *ListNode {
 	return head
 }
 
-func DeleteDuplicates(head *ListNode) *ListNode  {
+func DeleteDuplicates(head *ListNode) *ListNode {
 	return deleteDuplicates(head)
 }

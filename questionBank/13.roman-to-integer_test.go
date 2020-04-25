@@ -4,7 +4,7 @@ import (
 	"testing"
 )
 
-func TestRomanToInteger(t *testing.T)  {
+func TestRomanToInteger(t *testing.T) {
 	intNum := RomanToInt("MCMXCIV")
 	if intNum != 1994 {
 		t.Log(intNum)

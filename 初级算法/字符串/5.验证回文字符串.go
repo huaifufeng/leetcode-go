@@ -14,7 +14,7 @@ func isPalindrome(s string) bool {
 	s = strings.ToLower(s)
 	index := 0
 	sSlice := make([]uint8, length)
-	for i:=0; i < length; i++ {
+	for i := 0; i < length; i++ {
 		if s[i] >= '0' && s[i] <= '9' {
 			sSlice[index] = s[i]
 			index++
@@ -29,8 +29,8 @@ func isPalindrome(s string) bool {
 	}
 
 	sSlice = sSlice[:index]
-	i:=0
-	j:=len(sSlice) - 1
+	i := 0
+	j := len(sSlice) - 1
 	for i < j {
 		if sSlice[i] != sSlice[j] {
 			return false
@@ -41,4 +41,3 @@ func isPalindrome(s string) bool {
 
 	return true
 }
-

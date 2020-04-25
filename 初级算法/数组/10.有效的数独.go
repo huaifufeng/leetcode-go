@@ -5,19 +5,19 @@ func isValidSudoku(board [][]byte) bool {
 	verticalMap := make([]map[byte]int, 9)
 	rectMap := make([]map[byte]int, 3)
 
-	for i:=0; i<9; i++ {
+	for i := 0; i < 9; i++ {
 		lineMap := make(map[byte]int, 9)
 
-		if i % 3 == 0 {
+		if i%3 == 0 {
 			rectMap = make([]map[byte]int, 3)
 		}
 
-		for j:= 0; j<9;j++ {
+		for j := 0; j < 9; j++ {
 			if board[i][j] == '.' {
 				continue
 			}
 
-			if _, ok := lineMap[board[i][j]];ok {
+			if _, ok := lineMap[board[i][j]]; ok {
 				return false
 			} else {
 				lineMap[board[i][j]] = 1
@@ -33,13 +33,13 @@ func isValidSudoku(board [][]byte) bool {
 			}
 
 			key := 0
-			if j >= 3 && j <6 {
+			if j >= 3 && j < 6 {
 				key = 1
-			} else if j>=6 {
-				key =2
+			} else if j >= 6 {
+				key = 2
 			}
 
-			if _, ok := rectMap[key][board[i][j]];ok {
+			if _, ok := rectMap[key][board[i][j]]; ok {
 				return false
 			} else {
 				if rectMap[key] == nil {

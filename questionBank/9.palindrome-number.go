@@ -39,10 +39,10 @@ func isPalindrome(x int) bool {
 	//这里使用循环
 	for {
 		lenNow = len(intStr)
-		if intStr[0] == intStr[lenNow - 1] {
+		if intStr[0] == intStr[lenNow-1] {
 			//当字符串长度大于2说明还有要比较的字符串对，否则就是满足条件了
 			if lenNow > 2 {
-				intStr = intStr[1:lenNow-1]
+				intStr = intStr[1 : lenNow-1]
 			} else {
 				return true
 			}
@@ -64,7 +64,7 @@ func isPalindrome1(x int) bool {
 	for {
 		pop := x % 10
 		x = x / 10
-		reverseInt = reverseInt * 10 + pop
+		reverseInt = reverseInt*10 + pop
 
 		if x < 10 {
 			break
@@ -72,11 +72,11 @@ func isPalindrome1(x int) bool {
 	}
 
 	if x != 0 {
-		reverseInt = reverseInt * 10 + x
+		reverseInt = reverseInt*10 + x
 	}
 
-	if reverseInt == tempX{
-		 return true
+	if reverseInt == tempX {
+		return true
 	} else {
 		return false
 	}

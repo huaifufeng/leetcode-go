@@ -33,7 +33,7 @@ func myAtoi(str string) int {
 	max := math.MaxInt32 / 10
 	min := math.MinInt32 / 10
 
-	for ; i<length; i++ {
+	for ; i < length; i++ {
 		if !(str[i] >= '0' && str[i] <= '9') {
 			break
 		}
@@ -48,7 +48,7 @@ func myAtoi(str string) int {
 			return math.MinInt32
 		}
 
-		ret = ret * 10 + flag * newVal
+		ret = ret*10 + flag*newVal
 	}
 
 	return ret

@@ -34,14 +34,14 @@ func isValid(s string) bool {
 	}
 
 	//奇数说明没有全部配对，返回false
-	if length % 2 == 1 {
+	if length%2 == 1 {
 		return false
 	}
 
 	strMap := map[byte]byte{
-		'}' : '{',
-		')' : '(',
-		']' : '[',
+		'}': '{',
+		')': '(',
+		']': '[',
 	}
 
 	strSlice := make([]byte, length)
@@ -49,7 +49,7 @@ func isValid(s string) bool {
 	for i := 0; i < length; i++ {
 		oneB, ok := strMap[s[i]]
 		if ok {
-			if left == 0 || strSlice[left - 1] != oneB {
+			if left == 0 || strSlice[left-1] != oneB {
 				return false
 			} else {
 				left--
@@ -67,6 +67,6 @@ func isValid(s string) bool {
 	return true
 }
 
-func ValidParentheses(s string) bool{
+func ValidParentheses(s string) bool {
 	return isValid(s)
 }

@@ -43,10 +43,10 @@ func reverse(x int) int {
 	negativeNum := math.MinInt32 / 10
 	pop := 0
 
-	for{
+	for {
 		pop = x % 10
 		x = x / 10
-		reverseInt = reverseInt * 10 + pop
+		reverseInt = reverseInt*10 + pop
 		if sign == 1 {
 			if reverseInt > positiveNum && pop > 0 {
 				return 0
@@ -71,7 +71,7 @@ func reverse(x int) int {
 	}
 
 	if x != 0 {
-		reverseInt = reverseInt * 10 + x
+		reverseInt = reverseInt*10 + x
 	}
 
 	return reverseInt

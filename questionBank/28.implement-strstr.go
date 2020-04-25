@@ -20,19 +20,19 @@
 package questionBank
 
 func strStr(haystack string, needle string) int {
-	if len(needle) == 0  {
+	if len(needle) == 0 {
 		return 0
 	}
 
 	strLen := len(needle)
 	hayLen := len(haystack)
-	for i := 0; i < hayLen; i++  {
+	for i := 0; i < hayLen; i++ {
 		if haystack[i] == needle[0] {
-			endPos := i+strLen
+			endPos := i + strLen
 			if endPos > hayLen {
 				return -1
 			}
-			substr := string(haystack[i:i+strLen])
+			substr := string(haystack[i : i+strLen])
 			if substr == needle {
 				return i
 			} else if len(substr) < strLen {

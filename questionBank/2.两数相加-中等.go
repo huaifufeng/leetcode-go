@@ -2,7 +2,7 @@
 package questionBank
 
 type ListNode struct {
-	Val int
+	Val  int
 	Next *ListNode
 }
 
@@ -16,7 +16,7 @@ func (l *ListNode) print() {
 func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 	var l3 *ListNode
 	l3Last := l3
-	upValue := 0  //相加后上一位的值
+	upValue := 0 //相加后上一位的值
 	for l1 != nil || l2 != nil || upValue != 0 {
 		if l1 != nil {
 			upValue += l1.Val
@@ -44,4 +44,3 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 
 	return l3
 }
-

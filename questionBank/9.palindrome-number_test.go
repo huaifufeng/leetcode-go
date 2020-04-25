@@ -4,7 +4,7 @@ import (
 	"testing"
 )
 
-func TestPalindromeNumber(t *testing.T)  {
+func TestPalindromeNumber(t *testing.T) {
 	reverseInt := PalindromeNumber(1)
 	if reverseInt != true {
 		t.Log(reverseInt)

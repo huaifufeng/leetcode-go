@@ -38,7 +38,7 @@ func lengthOfLongestSubstring(s string) int {
 			//只有在字符在i之后的位置时进行i值得重置操作，因为位于i之前的话，说明已经不再统计范围内部了，不需要进行处理了
 			if lastIndex > i {
 				currLength := j - i
-				if currLength > maxLength{
+				if currLength > maxLength {
 					maxLength = currLength
 				}
 
@@ -52,7 +52,7 @@ func lengthOfLongestSubstring(s string) int {
 	}
 
 	currLength := j - i
-	if currLength > maxLength{
+	if currLength > maxLength {
 		maxLength = currLength
 	}
 

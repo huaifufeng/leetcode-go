@@ -49,7 +49,7 @@ func removeDuplicates2(nums []int, k int) int {
 		//这里i<k 这个条件，会把数组的前k个元素过滤掉不进行处理，最多会重复k次
 		//v > nums[i - k] 比较当前元素和之前第k个元素的值，大说明是之前没有的，放到i的下个位置，
 		// 如果相等，说明超过重复的次数k，不进行复制，相当于丢弃了
-		if i < k || v > nums[i - k] {
+		if i < k || v > nums[i-k] {
 			i++
 			nums[i] = v
 		}

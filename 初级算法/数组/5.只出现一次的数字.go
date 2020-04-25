@@ -3,9 +3,9 @@ package 数组
 
 func singleNumber(nums []int) int {
 	hasMap := make(map[int]int, len(nums))
-	for _,val := range nums {
-		if _,ok := hasMap[val];ok {
-			delete(hasMap,val)
+	for _, val := range nums {
+		if _, ok := hasMap[val]; ok {
+			delete(hasMap, val)
 		} else {
 			hasMap[val] = 1
 		}

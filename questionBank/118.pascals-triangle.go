@@ -35,7 +35,7 @@ func generate(numRows int) [][]int {
 			continue
 		}
 
-		ret[i] = make([]int, i + 1)
+		ret[i] = make([]int, i+1)
 		//当第一行之外的行数时，循环添加i+1个元素，其中0和i位的位置为1，其他位置为上一行中左上元素和右上元素的和
 		for j := 0; j <= i; j++ {
 			lastLine := i - 1

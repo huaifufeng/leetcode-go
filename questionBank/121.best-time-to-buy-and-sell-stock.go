@@ -26,7 +26,7 @@ func maxProfit1(prices []int) int {
 	maxPrice := 0
 
 	//对所有数组元素进行比较
-	for i := 0; i < len(prices) - 1; i++ {
+	for i := 0; i < len(prices)-1; i++ {
 		for j := i + 1; j < len(prices); j++ {
 			if prices[j] > prices[i] {
 				price := prices[j] - prices[i]

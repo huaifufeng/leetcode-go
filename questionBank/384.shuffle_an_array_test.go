@@ -5,7 +5,7 @@ import (
 )
 
 func TestShuffleAnArray(t *testing.T) {
-	nums := []int{1,2,3}
+	nums := []int{1, 2, 3}
 	_, p2 := ShuffleAnArray(nums)
 
 	for key, value := range p2 {

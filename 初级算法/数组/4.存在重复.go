@@ -3,8 +3,8 @@ package 数组
 
 func containsDuplicate(nums []int) bool {
 	hasMap := make(map[int]int, len(nums))
-	for _,val := range nums {
-		if _,ok := hasMap[val];ok {
+	for _, val := range nums {
+		if _, ok := hasMap[val]; ok {
 			return true
 		} else {
 			hasMap[val] = 1

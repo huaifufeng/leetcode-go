@@ -38,13 +38,12 @@ func Constructor(nums []int) Solution {
 	//这里需要复制一份结果出来，因为切片使用同一份数据，对一个切片的修改会显示到另外的切片上面，影响数据
 	copy(result, nums)
 	solution := Solution{
-		origin : nums,
-		result : result,
+		origin: nums,
+		result: result,
 	}
 
 	return solution
 }
-
 
 /** Resets the array to its original configuration and return it. */
 func (this *Solution) Reset() []int {
@@ -52,7 +51,6 @@ func (this *Solution) Reset() []int {
 
 	return this.result
 }
-
 
 /** Returns a random shuffling of the array. */
 func (this *Solution) Shuffle() []int {

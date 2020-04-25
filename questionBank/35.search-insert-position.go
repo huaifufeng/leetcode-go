@@ -29,7 +29,7 @@ func searchInsert(nums []int, target int) int {
 	//2、如果目标比最后一个元素的值都大，直接返回数组长度
 	if target <= nums[0] {
 		return 0
-	} else if target > nums[length - 1]{
+	} else if target > nums[length-1] {
 		return length
 	}
 
@@ -37,9 +37,9 @@ func searchInsert(nums []int, target int) int {
 	right := length - 1
 
 	//只有在左值小于右值的情况下进行处理，
-	for left < right  {
+	for left < right {
 		//这里是左中值
-		mid := left + (right - left) / 2
+		mid := left + (right-left)/2
 		//相等就是找到目标元素位置，直接返回
 		if nums[mid] == target {
 			return mid

@@ -9,8 +9,8 @@ func plusOne(digits []int) []int {
 
 	upVal := 1
 	for i := length - 1; i >= 0; i-- {
-		upVal+= digits[i]
-		digits[i] = upVal %  10
+		upVal += digits[i]
+		digits[i] = upVal % 10
 		upVal /= 10
 	}
 

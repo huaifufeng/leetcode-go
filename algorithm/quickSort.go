@@ -1,13 +1,14 @@
 package algorithm
 
-import "fmt"
+//快速排序
+//不稳定排序，时间复杂度O(nlogn) 空间复杂度O(logn) 原地排序
 
 func QuickSort(nums []int, start, end int) {
 	if start <= end {
 		pivot := partition2(nums, start, end)
-		fmt.Println(pivot)
-		QuickSort(nums, start, pivot - 1)
-		QuickSort(nums, pivot + 1, end)
+
+		QuickSort(nums, start, pivot-1)
+		QuickSort(nums, pivot+1, end)
 	}
 }
 
@@ -38,7 +39,6 @@ func partition2(nums []int, start, end int) int {
 		}
 	}
 
-	fmt.Println(nums, start, end, i, j)
 	nums[i], nums[start] = nums[start], nums[i]
 
 	return i

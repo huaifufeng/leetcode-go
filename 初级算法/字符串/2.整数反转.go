@@ -8,19 +8,18 @@ func reverse(x int) int {
 	min := int(math.Abs(math.MinInt32 / 10))
 	reverser := 0
 
-	for x != 0{
+	for x != 0 {
 		num := x % 10
 
 		if reverser > max || (reverser == max && num > 7) {
-			 return 0
+			return 0
 		}
 
 		if reverser < min || (reverser == min && num > 8) {
 			return 0
 		}
 
-
-		reverser = reverser * 10 + num
+		reverser = reverser*10 + num
 		x /= 10
 	}
 

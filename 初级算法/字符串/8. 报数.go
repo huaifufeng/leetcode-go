@@ -46,4 +46,3 @@ func getStrNew(str string) string {
 
 	return strNew
 }
-

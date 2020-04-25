@@ -23,7 +23,7 @@ func rotate1(nums []int, k int) {
 	if k > length {
 		k = k % length
 	}
-	nums = append(nums[length-k:], nums[0:length - k]...)
+	nums = append(nums[length-k:], nums[0:length-k]...)
 }
 
 func rotate2(nums []int, k int) {
@@ -32,7 +32,7 @@ func rotate2(nums []int, k int) {
 		k = k % length
 	}
 	newNums := make([]int, length)
-	for i:=0; i< length;i++ {
+	for i := 0; i < length; i++ {
 		if i+k > length-1 {
 			newNums[i+k-length] = nums[i]
 		} else {
@@ -42,4 +42,3 @@ func rotate2(nums []int, k int) {
 
 	copy(nums, newNums)
 }
-

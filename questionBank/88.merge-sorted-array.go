@@ -20,7 +20,7 @@
 */
 package questionBank
 
-func merge(nums1 []int, m int, nums2 []int, n int)  {
+func merge(nums1 []int, m int, nums2 []int, n int) {
 	i := m - 1
 	j := n - 1
 
@@ -39,12 +39,12 @@ func merge(nums1 []int, m int, nums2 []int, n int)  {
 	}
 
 	//如果nums2没有处理完毕，就继续把nums2放入到nums1的相应位置
-	for j >= 0{
+	for j >= 0 {
 		nums1[j] = nums2[j]
 		j--
 	}
 }
 
-func Merge(nums1 []int, m int, nums2 []int, n int)  {
+func Merge(nums1 []int, m int, nums2 []int, n int) {
 	merge(nums1, m, nums2, n)
 }
