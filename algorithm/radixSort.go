@@ -1,7 +1,7 @@
 package algorithm
 
 //基数排序
-//稳定排序 时间复杂度O(n) 空间复杂度O(n)
+//稳定排序 时间复杂度O(dn) 空间复杂度O(n)
 
 func RadixSort(nums []string) {
 	//获取数组中最长的字符串的长度

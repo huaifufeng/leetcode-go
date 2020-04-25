@@ -1,7 +1,7 @@
 package algorithm
 
 //计数排序
-//稳定排序，时间复杂度O(n) 空间复杂度O(n)
+//稳定排序，时间复杂度O(n+k) 空间复杂度O(n)
 //条件：整数，小数量，间隔不大
 
 func CountSort(nums []int) []int {
