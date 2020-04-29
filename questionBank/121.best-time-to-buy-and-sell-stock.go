@@ -22,7 +22,7 @@ import (
 	"math"
 )
 
-func maxProfit1(prices []int) int {
+func maxProfit2(prices []int) int {
 	maxPrice := 0
 
 	//对所有数组元素进行比较
@@ -57,8 +57,4 @@ func maxProfit(prices []int) int {
 	}
 
 	return maxPrice
-}
-
-func MaxProfit(prices []int) int {
-	return maxProfit(prices)
 }

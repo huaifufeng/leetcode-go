@@ -53,7 +53,7 @@ func isPalindrome(x int) bool {
 }
 
 //整数式处理方法
-func isPalindrome1(x int) bool {
+func isPalindrome2(x int) bool {
 	if x < 0 {
 		return false
 	}
@@ -80,8 +80,4 @@ func isPalindrome1(x int) bool {
 	} else {
 		return false
 	}
-}
-
-func PalindromeNumber(x int) bool {
-	return isPalindrome1(x)
 }

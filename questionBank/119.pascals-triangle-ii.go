@@ -34,7 +34,3 @@ func getRow(rowIndex int) []int {
 
 	return ret
 }
-
-func GetRow(rowIndex int) []int {
-	return getRow(rowIndex)
-}

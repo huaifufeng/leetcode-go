@@ -5,9 +5,17 @@ import (
 )
 
 func TestPalindromeNumber(t *testing.T) {
-	reverseInt := PalindromeNumber(1)
+	reverseInt := isPalindrome(1)
 	if reverseInt != true {
 		t.Log(reverseInt)
-		t.Error("正数反转失败")
+		t.Error("判断回文数组方法失败")
+	}
+}
+
+func TestPalindromeNumber2(t *testing.T) {
+	reverseInt := isPalindrome2(1)
+	if reverseInt != true {
+		t.Log(reverseInt)
+		t.Error("判断回文数组方法2失败")
 	}
 }

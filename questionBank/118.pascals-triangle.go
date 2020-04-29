@@ -51,7 +51,3 @@ func generate(numRows int) [][]int {
 
 	return ret
 }
-
-func Generate(numRows int) [][]int {
-	return generate(numRows)
-}

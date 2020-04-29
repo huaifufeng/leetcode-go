@@ -54,7 +54,7 @@ func TestReverseList2(t *testing.T) {
 	for value != nil && res != nil {
 		if value.Val != res.Val {
 			t.Log(value)
-			t.Error("逆转链表方法验证失败")
+			t.Error("逆转链表方法2验证失败")
 		}
 
 		value = value.Next

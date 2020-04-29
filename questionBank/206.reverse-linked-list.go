@@ -38,12 +38,19 @@ func ReverseList(head *ListNode) *ListNode {
 	return pre
 }
 
+//递归处理链表反转
 func ReverseList2(head *ListNode) *ListNode {
+	//这里定义递归的终止条件，当元素的下个节点为nil时截止
 	if head == nil || head.Next == nil {
 		return head
 	}
 
+	//递归处理这个节点的下个节点， 这里返回的值都是链表原有节点的最后一个节点地址
+	//这个地址之后是已经反转之后的链表元素
 	pre := ReverseList2(head.Next)
+	//这里进行链表元素反转的处理，首先反转当前节点的下一个节点
+	//让下一个节点指向当前节点
+	//然后将当前节点的的下一个节点置为nil
 	head.Next.Next = head
 	head.Next = nil
 

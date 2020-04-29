@@ -66,7 +66,3 @@ func isValid(s string) bool {
 
 	return true
 }
-
-func ValidParentheses(s string) bool {
-	return isValid(s)
-}

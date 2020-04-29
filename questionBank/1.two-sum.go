@@ -38,8 +38,3 @@ func twoSum(num []int, target int) []int {
 
 	return retNum
 }
-
-//测试用例使用的方法
-func TwoSum(num []int, target int) []int {
-	return twoSum(num, target)
-}

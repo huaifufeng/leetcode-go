@@ -76,7 +76,3 @@ func reverse(x int) int {
 
 	return reverseInt
 }
-
-func Reverse7(x int) int {
-	return reverse(x)
-}

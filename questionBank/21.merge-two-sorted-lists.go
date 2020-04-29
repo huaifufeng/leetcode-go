@@ -44,7 +44,7 @@ func mergeTwoLists(l1 *ListNode, l2 *ListNode) *ListNode {
 	return l
 }
 
-func mergeTwoLists1(l1 *ListNode, l2 *ListNode) *ListNode {
+func mergeTwoLists2(l1 *ListNode, l2 *ListNode) *ListNode {
 	l := new(ListNode)
 	first := l
 
@@ -67,8 +67,4 @@ func mergeTwoLists1(l1 *ListNode, l2 *ListNode) *ListNode {
 	}
 
 	return first.Next
-}
-
-func MergeTwoLists(l1 *ListNode, l2 *ListNode) *ListNode {
-	return mergeTwoLists1(l1, l2)
 }

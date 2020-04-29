@@ -39,7 +39,3 @@ func climbStairs(n int) int {
 
 	return res
 }
-
-func ClimbStairs(n int) int {
-	return climbStairs(n)
-}

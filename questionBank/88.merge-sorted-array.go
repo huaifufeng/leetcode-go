@@ -44,7 +44,3 @@ func merge(nums1 []int, m int, nums2 []int, n int) {
 		j--
 	}
 }
-
-func Merge(nums1 []int, m int, nums2 []int, n int) {
-	merge(nums1, m, nums2, n)
-}

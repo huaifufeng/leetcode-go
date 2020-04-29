@@ -58,7 +58,3 @@ func lengthOfLongestSubstring(s string) int {
 
 	return maxLength
 }
-
-func LengthOfLongestSubstring(s string) int {
-	return lengthOfLongestSubstring(s)
-}

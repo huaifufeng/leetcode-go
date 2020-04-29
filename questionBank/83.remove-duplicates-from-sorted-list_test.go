@@ -15,7 +15,7 @@ func TestDeleteDuplicates(t *testing.T) {
 			},
 		},
 	}
-	res := DeleteDuplicates(head)
+	res := deleteDuplicates(head)
 	for res.Val != 1 || res.Next.Val != 2 {
 		t.Log(res)
 		t.Error("删除链表重复值错误")

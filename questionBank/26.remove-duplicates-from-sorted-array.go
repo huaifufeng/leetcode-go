@@ -14,8 +14,6 @@
 */
 package questionBank
 
-import "fmt"
-
 func removeDuplicates(nums []int) int {
 	//空数组直接返回0
 	if len(nums) == 0 {
@@ -53,13 +51,7 @@ func removeDuplicates2(nums []int, k int) int {
 			i++
 			nums[i] = v
 		}
-
-		fmt.Println(i)
 	}
 
-	return i
-}
-
-func RemoveDuplicates(nums []int) int {
-	return removeDuplicates(nums)
+	return i + 1
 }

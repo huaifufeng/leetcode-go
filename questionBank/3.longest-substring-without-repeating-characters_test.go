@@ -5,9 +5,9 @@ import (
 )
 
 func TestLongestSubstringWithoutRepeatingCharacters(t *testing.T) {
-	value := LengthOfLongestSubstring("abba")
+	value := lengthOfLongestSubstring("abba")
 	if value != 2 {
 		t.Log(value)
-		t.Error("方法验证失败")
+		t.Error("获取最长子串方法验证失败")
 	}
 }

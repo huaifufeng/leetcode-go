@@ -63,7 +63,3 @@ func lengthOfLastWord2(s string) int {
 
 	return curLength
 }
-
-func LengthOfLastWord(s string) int {
-	return lengthOfLastWord2(s)
-}

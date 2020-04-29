@@ -5,8 +5,8 @@ import (
 )
 
 func TestGetRow(t *testing.T) {
-	res := GetRow(3)
+	res := getRow(3)
 	if res[2] != 3 {
-		t.Error("方法错误")
+		t.Error("获取杨辉三角一行的方法错误")
 	}
 }

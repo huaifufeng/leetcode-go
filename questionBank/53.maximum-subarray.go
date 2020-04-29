@@ -16,7 +16,7 @@
 package questionBank
 
 func maxSubArray(nums []int) int {
-	res := nums[0]
+	maxValue := nums[0]
 	sum := 0
 	for _, val := range nums {
 		if sum > 0 {
@@ -26,14 +26,10 @@ func maxSubArray(nums []int) int {
 		}
 
 		//将之前保存的最大值与加和结进行比较，取其中的最大值
-		if res < sum {
-			res = sum
+		if maxValue < sum {
+			maxValue = sum
 		}
 	}
 
-	return res
-}
-
-func MaxSubArray(nums []int) int {
-	return maxSubArray(nums)
+	return maxValue
 }

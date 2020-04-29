@@ -30,7 +30,3 @@ func removeElement(nums []int, val int) int {
 
 	return pos
 }
-
-func RemoveElement(nums []int, val int) int {
-	return removeElement(nums, val)
-}

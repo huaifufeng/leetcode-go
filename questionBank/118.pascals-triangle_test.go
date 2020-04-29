@@ -5,8 +5,8 @@ import (
 )
 
 func TestGenerate(t *testing.T) {
-	res := Generate(1)
+	res := generate(1)
 	if res[0][0] != 1 {
-		t.Error("方法错误")
+		t.Error("杨辉三角方法错误")
 	}
 }

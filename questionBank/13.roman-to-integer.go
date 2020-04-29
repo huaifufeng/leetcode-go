@@ -58,7 +58,3 @@ func romanToInt(s string) int {
 
 	return intNum
 }
-
-func RomanToInt(s string) int {
-	return romanToInt(s)
-}

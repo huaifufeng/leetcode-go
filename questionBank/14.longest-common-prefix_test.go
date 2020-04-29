@@ -5,9 +5,9 @@ import (
 )
 
 func TestLongestCommonPrefix(t *testing.T) {
-	intNum := LongestCommonPrefix([]string{"flow", "fl", "flight"})
+	intNum := longestCommonPrefix([]string{"flow", "fl", "flight"})
 	if intNum != "fl" {
 		t.Log(intNum)
-		t.Error("公共前缀获取失败")
+		t.Error("获取公共前缀方法失败")
 	}
 }

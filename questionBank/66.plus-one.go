@@ -33,7 +33,3 @@ func plusOne(digits []int) []int {
 
 	return digits
 }
-
-func PlusOne(digits []int) []int {
-	return plusOne(digits)
-}
