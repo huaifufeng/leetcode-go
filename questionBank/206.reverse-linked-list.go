@@ -29,10 +29,7 @@ func ReverseList(head *ListNode) *ListNode {
 	var pre *ListNode
 	cur := head
 	for cur != nil {
-		temp := cur.Next
-		cur.Next = pre
-		pre = cur
-		cur = temp
+		cur.Next, pre, cur = pre, cur, cur.Next
 	}
 
 	return pre
