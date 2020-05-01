@@ -21,6 +21,11 @@ package questionBank
  * }
  */
 func swapPairs(head *ListNode) *ListNode {
+	//进行异常情况的判断
+	if head == nil || head.Next == nil {
+		return head
+	}
+
 	//因为在交换的时候需要获取元素对的前一个元素，这里声明链表头节点前面的元素节点
 	prev := &ListNode{
 		Val:  -1,
