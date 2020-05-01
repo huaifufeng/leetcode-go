@@ -50,3 +50,16 @@ func swapPairs(head *ListNode) *ListNode {
 
 	return first
 }
+
+//递归实现
+func swapPairs2(head *ListNode) *ListNode {
+	if head == nil || head.Next == nil {
+		return head
+	}
+
+	next := head.Next
+	head.Next = swapPairs2(next.Next)
+	next.Next = head
+
+	return next
+}
