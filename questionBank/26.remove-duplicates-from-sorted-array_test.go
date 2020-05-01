@@ -8,7 +8,6 @@ func TestRemoveDuplicates(t *testing.T) {
 	nums := []int{0, 0, 1, 1, 1, 2, 2, 3, 3, 4}
 	res := removeDuplicates(nums)
 	if res != 5 {
-		t.Log(res)
 		t.Error("移除有序数组重复元素方法验证失败")
 	}
 
@@ -21,7 +20,6 @@ func TestRemoveDuplicates2(t *testing.T) {
 	nums := []int{0, 0, 1, 1, 1, 2, 2, 3, 3, 4}
 	res := removeDuplicates2(nums, 0)
 	if res != 5 {
-		t.Log(res)
 		t.Error("移除有序数组重复元素方法验证失败")
 	}
 

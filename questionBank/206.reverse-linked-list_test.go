@@ -11,7 +11,7 @@ func TestReverseList(t *testing.T) {
 				Val:  4,
 				Next: nil}}}
 
-	res := ReverseList(list)
+	res := reverseList(list)
 
 	value := &ListNode{
 		Val: 4,
@@ -23,7 +23,6 @@ func TestReverseList(t *testing.T) {
 
 	for value != nil && res != nil {
 		if value.Val != res.Val {
-			t.Log(value)
 			t.Error("逆转链表方法验证失败")
 		}
 
@@ -41,7 +40,7 @@ func TestReverseList2(t *testing.T) {
 				Val:  4,
 				Next: nil}}}
 
-	res := ReverseList2(list)
+	res := reverseList2(list)
 
 	value := &ListNode{
 		Val: 4,
@@ -53,7 +52,6 @@ func TestReverseList2(t *testing.T) {
 
 	for value != nil && res != nil {
 		if value.Val != res.Val {
-			t.Log(value)
 			t.Error("逆转链表方法2验证失败")
 		}
 

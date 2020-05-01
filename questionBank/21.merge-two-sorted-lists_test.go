@@ -38,7 +38,6 @@ func TestMergeTwoLists(t *testing.T) {
 				}}}}
 	for value != nil && res != nil {
 		if value.Val != res.Val {
-			t.Log(value)
 			t.Error("合并有序链表方法验证失败")
 		}
 
@@ -81,7 +80,6 @@ func TestMergeTwoLists2(t *testing.T) {
 				}}}}
 	for value != nil && res != nil {
 		if value.Val != res.Val {
-			t.Log(value)
 			t.Error("合并有序链表方法2验证失败")
 		}
 
