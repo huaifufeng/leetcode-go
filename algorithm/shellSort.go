@@ -1,7 +1,5 @@
 package algorithm
 
-import "fmt"
-
 //希尔排序
 
 func ShellSort(nums []int) {
@@ -24,8 +22,6 @@ func ShellSort(nums []int) {
 				nums[k+gap] = temp
 			}
 		}
-
-		fmt.Println(nums)
 
 		gap = gap / 2
 	}

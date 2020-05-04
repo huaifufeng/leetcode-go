@@ -30,8 +30,6 @@
 */
 package questionBank
 
-import "fmt"
-
 /**
  * Definition for singly-linked list.
  * type ListNode struct {
@@ -69,7 +67,6 @@ func hasCycle2(head *ListNode) bool {
 	nodeMap := make(map[*ListNode]int)
 
 	for head != nil {
-		fmt.Print(nodeMap)
 		//如果节点在hash中存在，说明之前遇到过
 		if _, ok := nodeMap[head]; ok {
 			return true
