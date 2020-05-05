@@ -1,7 +1,6 @@
 package algorithm
 
 import (
-	"fmt"
 	"testing"
 )
 
@@ -14,7 +13,6 @@ func TestLruList(t *testing.T) {
 	lru.getItem(2)
 	head := lru.head
 	for head != nil {
-		fmt.Println(head.Val)
 		head = head.Next
 	}
 }
