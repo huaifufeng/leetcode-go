@@ -27,7 +27,7 @@ func (h *Heap) insert(val int) {
 	i := h.count + 1
 	h.data[i] = val
 	h.count++
-	//当在堆内，并且子节点比父节点打 进行交换处理
+	//当在堆内，并且子节点比父节点大 进行交换处理
 	for i/2 > 0 && h.data[i] > h.data[i/2] {
 		h.data[i], h.data[i/2] = h.data[i/2], h.data[i]
 		i = i / 2
