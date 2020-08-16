@@ -13,8 +13,6 @@
 */
 package questionBank
 
-import ()
-
 func validPalindrome(s string) bool {
 	if len(s) == 0 {
 		return true
