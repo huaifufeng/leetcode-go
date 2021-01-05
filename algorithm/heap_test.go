@@ -1,7 +1,6 @@
 package algorithm
 
 import (
-	"fmt"
 	"testing"
 )
 
@@ -14,8 +13,6 @@ func TestHeapInsert(t *testing.T) {
 	heap.insert(10)
 	heap.insert(14)
 
-	fmt.Println(heap)
-
 	heap.delete()
 	heap.delete()
 	heap.delete()
@@ -23,7 +20,5 @@ func TestHeapInsert(t *testing.T) {
 
 	heap.insert(2)
 	heap.insert(21)
-
-	fmt.Println(heap)
 
 }

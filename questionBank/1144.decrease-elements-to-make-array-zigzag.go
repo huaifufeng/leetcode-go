@@ -22,8 +22,6 @@
 */
 package questionBank
 
-import "fmt"
-
 func movesToMakeZigzag(nums []int) int {
 	if len(nums) < 2 {
 		return 0
@@ -76,7 +74,6 @@ func movesToMakeZigzag(nums []int) int {
 			//不处理超出范围的元素
 			if index+1 < len(nums) {
 				rightSub = nums[index+1] - nums[index] + 1
-				fmt.Println(index, nums)
 				if rightSub > 0 {
 					nums[index+1] -= rightSub
 					ordNum += rightSub
@@ -85,7 +82,6 @@ func movesToMakeZigzag(nums []int) int {
 		}
 	}
 
-	fmt.Println(ordNum, evenNum)
 	minNum := ordNum
 	if minNum > evenNum {
 		minNum = evenNum

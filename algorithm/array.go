@@ -1,7 +1,5 @@
 package algorithm
 
-import "fmt"
-
 type Array struct {
 	data   []int //存储的元素列表
 	length int   //数组的长度
@@ -30,12 +28,10 @@ func (arr *Array) find(pos int) int {
 //在数组指定位置插入一个元素, 头部插入，尾部插入
 func (arr *Array) insert(index, item int) bool {
 	if arr.count == arr.length {
-		fmt.Println("数组已经满了！")
 		return false
 	}
 
 	if index < 0 || index > arr.count {
-		fmt.Println("插入的位置不合法！")
 		return false
 	}
 
@@ -53,7 +49,6 @@ func (arr *Array) insert(index, item int) bool {
 //删除数组中的元素
 func (arr *Array) delete(index int) bool {
 	if index < 0 || index >= arr.count {
-		fmt.Println("只能删除数组已经有元素的位置")
 		return false
 	}
 
