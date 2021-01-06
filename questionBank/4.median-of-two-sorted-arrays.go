@@ -15,14 +15,64 @@
 
   解题：
     1、使用框架自带的函数，合并两个切片之后排序，然后获取中位数的值
+    2、定义两个指针，分别对应两个数组，一次处理一个小数，直到获取中位数的值
 */
 package questionBank
 
 import (
+	"math"
 	"sort"
 )
 
 func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
+	length := len(nums1) + len(nums2)
+	left := 0
+	right := 0
+	if length%2 == 0 {
+		left = length/2 - 1
+		right = length / 2
+	} else {
+		left = length / 2
+		right = length / 2
+	}
+	nums := make([]int, 2)
+	l := 0
+	r := 0
+
+	for i := 0; i <= right; i++ {
+		temp1 := math.MaxInt32
+		temp2 := math.MaxInt32
+		if l < len(nums1) {
+			temp1 = nums1[l]
+		}
+
+		if len(nums2) > r {
+			temp2 = nums2[r]
+		}
+
+		min := 0
+		if temp1 >= temp2 {
+			min = temp2
+			r++
+		} else {
+			min = temp1
+			l++
+		}
+
+		if i == left {
+			nums[0] = min
+		}
+
+		if i == right {
+			nums[1] = min
+			break
+		}
+	}
+
+	return float64(nums[0]+nums[1]) / 2
+}
+
+func findMedianSortedArrays1(nums1 []int, nums2 []int) float64 {
 	nums := append(nums1, nums2...)
 
 	sort.Ints(nums)
