@@ -30,13 +30,11 @@
 */
 package questionBank
 
-/**
- * Definition for singly-linked list.
- * type ListNode struct {
- *     Val int
- *     Next *ListNode
- * }
- */
+type ListNode struct {
+	Val  int
+	Next *ListNode
+}
+
 func hasCycle(head *ListNode) bool {
 	//没有节点或只有一个节点 不是环
 	if head == nil || head.Next == nil {
