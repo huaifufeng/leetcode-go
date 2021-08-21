@@ -53,10 +53,8 @@ func compress(chars []byte) int {
 				index++
 				if num > 1 {
 					numStr := strconv.Itoa(num)
-					for i := 0; i < len(numStr); i++ {
-						chars[index] = numStr[i]
-						index++
-					}
+					copy(chars[index:index+len(numStr)], numStr)
+					index += len(numStr)
 				}
 			}
 
@@ -74,10 +72,8 @@ func compress(chars []byte) int {
 		index++
 		if num > 1 {
 			numStr := strconv.Itoa(num)
-			for i := 0; i < len(numStr); i++ {
-				chars[index] = numStr[i]
-				index++
-			}
+			copy(chars[index:index+len(numStr)], numStr)
+			index += len(numStr)
 		}
 	}
 
