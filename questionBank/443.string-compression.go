@@ -47,15 +47,19 @@ func compress(chars []byte) int {
 	index := 0
 	num := 0
 	for _, char := range chars {
+		if lastChar == 0 {
+			lastChar = char
+			num = 1
+			continue
+		}
+
 		if lastChar != char {
-			if num > 0 {
-				chars[index] = lastChar
-				index++
-				if num > 1 {
-					numStr := strconv.Itoa(num)
-					copy(chars[index:index+len(numStr)], numStr)
-					index += len(numStr)
-				}
+			chars[index] = lastChar
+			index++
+			if num > 1 {
+				numStr := strconv.Itoa(num)
+				copy(chars[index:index+len(numStr)], numStr)
+				index += len(numStr)
 			}
 
 			lastChar = char
@@ -67,14 +71,12 @@ func compress(chars []byte) int {
 		num++
 	}
 
-	if num > 0 {
-		chars[index] = lastChar
-		index++
-		if num > 1 {
-			numStr := strconv.Itoa(num)
-			copy(chars[index:index+len(numStr)], numStr)
-			index += len(numStr)
-		}
+	chars[index] = lastChar
+	index++
+	if num > 1 {
+		numStr := strconv.Itoa(num)
+		copy(chars[index:index+len(numStr)], numStr)
+		index += len(numStr)
 	}
 
 	chars = chars[:index]
