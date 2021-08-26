@@ -46,14 +46,22 @@
 */
 package questionBank
 
-import "fmt"
-
 func allPathsSourceTarget(graph [][]int) [][]int {
-	return getNext(0, graph)
+	list := getNext(0, graph)
+	res := make([][]int, 0)
+	for _, ints := range list {
+		if ints[len(ints)-1] != len(graph)-1 {
+			continue
+		}
+
+		res = append(res, ints)
+	}
+
+	return res
 }
 
 func getNext(index int, graph [][]int) [][]int {
-	if len(graph[index]) == 0 {
+	if len(graph[index]) == 0 || index == len(graph)-1 {
 		return [][]int{[]int{index}}
 	}
 
@@ -63,8 +71,6 @@ func getNext(index int, graph [][]int) [][]int {
 		for _, ints := range nextList {
 			item := []int{index}
 			item = append(item, ints...)
-
-			fmt.Println(item)
 			res = append(res, item)
 		}
 	}

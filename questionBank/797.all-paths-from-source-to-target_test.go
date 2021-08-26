@@ -65,7 +65,17 @@ func TestAllPathsSourceTarget(t *testing.T) {
 		[]int{},
 	}
 	res = allPathsSourceTarget(graph)
-	if len(res) != 2 {
+	if len(res) != 4 {
 		t.Error("所有可能的路径算法测试6错误！", res)
+	}
+
+	graph = [][]int{
+		[]int{2},
+		[]int{},
+		[]int{1},
+	}
+	res = allPathsSourceTarget(graph)
+	if len(res) != 1 {
+		t.Error("所有可能的路径算法测试7错误！", res)
 	}
 }
