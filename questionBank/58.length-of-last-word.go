@@ -14,6 +14,7 @@
     1、处理特殊情况之后，直接使用strings带的方法将字符串转换成单词的切片，直接获取最后一个单词的长度
 	2、遍历整个字符串，遇到空字符串，说明接下来的遇到字符串是需要修改单词的长度的，这里就设置标识为需要修改；
        否则，就按照标识如果需要修改，就设置单词长度为1，并标识设置为0不需要修改，直到遇到空字符串；否则就是增加单词长度
+    3、统计最后一个单词的长度，那就从后开始向前循环，只需要一个单词的长度。
 
 */
 package questionBank
@@ -62,4 +63,21 @@ func lengthOfLastWord2(s string) int {
 	}
 
 	return curLength
+}
+
+func lengthOfLastWord3(s string) int {
+	flag := false
+	num := 0
+	for i := len(s) - 1; i >= 0; i-- {
+		if s[i] != ' ' {
+			flag = true
+			num++
+		} else {
+			if flag {
+				return num
+			}
+		}
+	}
+
+	return num
 }

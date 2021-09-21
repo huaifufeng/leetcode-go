@@ -17,3 +17,10 @@ func TestLengthOfLastWord2(t *testing.T) {
 		t.Error("最后单词长度算法2错误")
 	}
 }
+
+func TestLengthOfLastWord3(t *testing.T) {
+	res := lengthOfLastWord3("a")
+	if res != 1 {
+		t.Error("最后单词长度算法3错误", res)
+	}
+}
